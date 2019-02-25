@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <hr>
+    <hr />
     <p>This is a test footer!</p>
   </footer>
 </template>
@@ -9,5 +9,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>

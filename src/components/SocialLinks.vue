@@ -7,10 +7,7 @@
       class="navbar-item"
       :aria-label="social.name"
     >
-      <i
-        aria-hidden="true"
-        :class="'fab fa-' + social.name"
-      ></i>
+      <i aria-hidden="true" :class="'fab fa-' + social.name"></i>
     </a>
   </div>
 </template>

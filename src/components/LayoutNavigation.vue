@@ -1,13 +1,7 @@
 <template>
-  <nav
-    class="navbar"
-    aria-label="main navigation"
-  >
+  <nav class="navbar" aria-label="main navigation">
     <div class="navbar-brand">
-      <a
-        href="/"
-        class="navbar-item"
-      >
+      <a href="/" class="navbar-item">
         <g-image
           src="../assets/img/avatar.png"
           alt="avatar"
@@ -27,31 +21,23 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div
-      id="navbarBasicExample"
-      class="navbar-menu"
-    >
+    <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <g-link
-          class="navbar-item is-uppercase"
-          :to="{ name: 'home' }"
-        >Home</g-link>
-        <g-link
-          class="navbar-item is-uppercase"
-          :to="{ name: 'blog' }"
-        >Blog</g-link>
-        <g-link
-          class="navbar-item is-uppercase"
-          :to="{ name: 'contact' }"
-        >Contact</g-link>
-        <g-link
-          class="navbar-item is-uppercase"
-          :to="{ name: 'about' }"
-        >About</g-link>
-        <g-link
-          class="navbar-item is-uppercase"
-          :to="{ name: 'work' }"
-        >Work</g-link>
+        <g-link class="navbar-item is-uppercase" :to="{ name: 'home' }"
+          >Home</g-link
+        >
+        <g-link class="navbar-item is-uppercase" :to="{ name: 'blog' }"
+          >Blog</g-link
+        >
+        <g-link class="navbar-item is-uppercase" :to="{ name: 'contact' }"
+          >Contact</g-link
+        >
+        <g-link class="navbar-item is-uppercase" :to="{ name: 'about' }"
+          >About</g-link
+        >
+        <g-link class="navbar-item is-uppercase" :to="{ name: 'work' }"
+          >Work</g-link
+        >
       </div>
     </div>
     <social-links />
