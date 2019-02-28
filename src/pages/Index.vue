@@ -1,7 +1,13 @@
 <template>
   <Layout>
     <div>
-      <div class="container is-fullheight hero-body">
+      <img
+        src="../assets/img/devlogo2.svg"
+        alt="logo"
+      >
+    </div>
+    <div>
+      <div class="">
         <h3 class="title has-text-dark is-4">Find a Post</h3>
         <b-field grouped>
           <b-input
@@ -11,7 +17,10 @@
             expanded
           ></b-input>
           <p class="control">
-            <button class="button is-primary" @click="searchPosts">
+            <button
+              class="button is-primary"
+              @click="searchPosts"
+            >
               Search
             </button>
           </p>
@@ -21,7 +30,11 @@
             <div class="box">
               <section>
                 <div class="columns is-multiline">
-                  <div class="column is-4" v-for="post in posts" :key="post.id">
+                  <div
+                    class="column is-4"
+                    v-for="post in posts"
+                    :key="post.id"
+                  >
                     <div class="card">
                       <div class="card-image">
                         <figure class="image is-4by3">
@@ -46,7 +59,7 @@
                         <div class="content">
                           <time :datetime="post.createdOn">{{
                             post.createdOn
-                          }}</time>
+                            }}</time>
                         </div>
                       </div>
                     </div>

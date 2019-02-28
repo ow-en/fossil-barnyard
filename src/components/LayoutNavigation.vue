@@ -1,7 +1,13 @@
 <template>
-  <nav class="navbar" aria-label="main navigation">
+  <nav
+    class="navbar"
+    aria-label="main navigation"
+  >
     <div class="navbar-brand">
-      <a href="/" class="navbar-item">
+      <a
+        href="/"
+        class="navbar-item"
+      >
         <g-image
           src="../assets/img/avatar.png"
           alt="avatar"
@@ -21,23 +27,31 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div
+      id="navbarBasicExample"
+      class="navbar-menu"
+    >
       <div class="navbar-start">
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'home' }"
-          >Home</g-link
-        >
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'blog' }"
-          >Blog</g-link
-        >
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'contact' }"
-          >Contact</g-link
-        >
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'about' }"
-          >About</g-link
-        >
-        <g-link class="navbar-item is-uppercase" :to="{ name: 'work' }"
-          >Work</g-link
-        >
+        <g-link
+          class="navbar-item is-uppercase"
+          :to="{ name: 'home' }"
+        >Home</g-link>
+        <g-link
+          class="navbar-item is-uppercase"
+          :to="{ name: 'blog' }"
+        >Blog</g-link>
+        <g-link
+          class="navbar-item is-uppercase"
+          :to="{ name: 'contact' }"
+        >Contact</g-link>
+        <g-link
+          class="navbar-item is-uppercase"
+          :to="{ name: 'about' }"
+        >About</g-link>
+        <g-link
+          class="navbar-item is-uppercase"
+          :to="{ name: 'work' }"
+        >Work</g-link>
       </div>
     </div>
     <social-links />
@@ -70,6 +84,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "brandon-grotesque";
+  src: url("https://use.typekit.net/lep8qlf.css");
+}
+
 .brand {
   margin-left: 5px;
   font-family: "Oswald", sans-serif;
@@ -78,6 +97,8 @@ export default {
 }
 
 .navbar-item {
-  font-family: "Oswald", sans-serif;
+  font-family: Oswald, sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

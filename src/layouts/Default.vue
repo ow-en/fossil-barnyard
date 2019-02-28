@@ -30,11 +30,16 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  @font-face {
+    font-family: "brandon-grotesque";
+    src: url("https://use.typekit.net/lep8qlf.css");
+  }
+  font-family: brandon-grotesque, sans-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif !important;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 17px !important;
   color: #2c3e50;
 }
 @media screen and (max-width: 768px) {
@@ -56,7 +61,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 18px;
   text-transform: uppercase;
 }
 </style>

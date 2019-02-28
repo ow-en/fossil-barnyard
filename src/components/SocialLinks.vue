@@ -7,7 +7,11 @@
       class="navbar-item"
       :aria-label="social.name"
     >
-      <i aria-hidden="true" :class="'fab fa-' + social.name"></i>
+      <i
+        aria-hidden="true"
+        :class="'fab fa-' + social.name"
+        :style="{'color': social.color}"
+      ></i>
     </a>
   </div>
 </template>
@@ -17,12 +21,31 @@ export default {
   data() {
     return {
       accounts: [
-        { name: "twitter", href: "http://twitter.com/caulfieldowen" },
-        { name: "github", href: "https://github.com/ow-en/" },
-        { name: "reddit", href: "https://www.reddit.com/u/broadsafe" },
+        {
+          name: "twitter",
+          href: "http://twitter.com/caulfieldowen",
+          color: "#1da1f2"
+        },
+        { name: "github", href: "https://github.com/ow-en/", color: "#0e1111" },
+        {
+          name: "reddit",
+          href: "https://www.reddit.com/u/broadsafe",
+          color: "#ff4500"
+        },
         {
           name: "linkedin",
-          href: "https://www.linkedin.com/in/owen-caulfield-832677166/"
+          href: "https://www.linkedin.com/in/owen-caulfield-832677166/",
+          color: "#0077b5"
+        },
+        {
+          name: "medium-m",
+          href: "https://www.medium.com/caulfieldOwen",
+          color: "#00ab6c"
+        },
+        {
+          name: "dev",
+          href: "#",
+          color: "#0e1111"
         }
       ]
     };

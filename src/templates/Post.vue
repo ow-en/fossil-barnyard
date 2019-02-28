@@ -5,8 +5,15 @@
       <small class="about">
         📅 {{ formatCreatedOn }} • ☕️ {{ $page.post.timeToRead }} min read
       </small>
-      <g-image v-if="$page.post.cover" :src="$page.post.cover" class="cover" />
-      <article v-html="$page.post.content" class="article"></article>
+      <g-image
+        v-if="$page.post.cover"
+        :src="$page.post.cover"
+        class="cover"
+      />
+      <article
+        v-html="$page.post.content"
+        class="article"
+      ></article>
     </div>
     <bulma-tag :tags="$page.post" />
   </Layout>
@@ -45,9 +52,9 @@ export default {
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:description", content: this.$page.post.excerpt },
         { name: "twitter:title", content: this.$page.post.title },
-        { name: "twitter:site", content: "@therealdanvega" },
+        { name: "twitter:site", content: "@caulfieldOwen" },
         { name: "twitter:image", content: this.getCoverImage },
-        { name: "twitter:creator", content: "@therealdanvega" },
+        { name: "twitter:creator", content: "@caulfieldOwen" },
         // open-graph
         { property: "og:updated_time", content: this.$page.post.date },
         { property: "og:image", content: this.getCoverImage },
