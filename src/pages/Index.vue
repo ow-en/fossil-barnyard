@@ -34,39 +34,33 @@
           <div class="column is-12">
             <div class="box">
               <section>
-                <div class="columns is-multiline">
-                  <div
-                    class="column is-4"
-                    v-for="post in posts"
-                    :key="post.id"
-                  >
-                    <div class="card">
-                      <div class="card-image">
-                        <figure class="image is-4by3">
-                          <img
-                            :src="
-                              post.postImage ? post.postImage.thumbnail : ''
-                            "
-                            :alt="post.title"
-                          />
-                        </figure>
-                      </div>
+                <div class="column is-12">
+                  <div class="card">
+                    <div
+                      v-for="post in $page.posts.edges"
+                      :key="post.node.id"
+                    >
                       <div class="card-content">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-6 has-text-danger">
-                              {{ post.title }}
-                            </p>
-                            <strong> {{ post.subtitle }}</strong>
-                          </div>
-                        </div>
-
-                        <div class="content">
-                          <time :datetime="post.createdOn">{{
-                            post.createdOn
-                            }}</time>
-                        </div>
+                        <p class="title">
+                          <g-link :to="post.node.path">{{post.node.title}}</g-link>
+                        </p>
+                        <p class="subtitle">
+                          {{ new Date(post.node.date).toLocaleDateString() }} • ☕️ {{post.node.timeToRead}} min read
+                        </p>
+                        <p v-if="post.node.excerpt">{{post.node.excerpt}}</p>
                       </div>
+                      <footer class="card-footer">
+                        <p class="card-footer-item">
+                          <span>
+                            View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+                          </span>
+                        </p>
+                        <p class="card-footer-item">
+                          <span>
+                            Share on <a href="#">Facebook</a>
+                          </span>
+                        </p>
+                      </footer>
                     </div>
                   </div>
                 </div>
@@ -88,16 +82,28 @@
 </static-query>
 
 <page-query>
-  query Posts {
-    posts: allPost {
-      edges {
-        node {
-          id
-          title
-        }
+query Posts ($page: Int) {
+  posts: allPost(perPage: 5, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
+    totalCount
+    edges {
+      node {
+        id
+        title
+        slug
+        excerpt
+        cover
+        timeToRead
+        path
+        date
+        tags
       }
     }
   }
+}
 </page-query>
 
 <script>
