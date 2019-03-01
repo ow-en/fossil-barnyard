@@ -33,23 +33,23 @@
     >
       <div class="navbar-start">
         <g-link
-          class="navbar-item is-uppercase"
+          class="navbar-item"
           :to="{ name: 'home' }"
         >Home</g-link>
         <g-link
-          class="navbar-item is-uppercase"
+          class="navbar-item"
           :to="{ name: 'blog' }"
         >Blog</g-link>
         <g-link
-          class="navbar-item is-uppercase"
+          class="navbar-item"
           :to="{ name: 'contact' }"
         >Contact</g-link>
         <g-link
-          class="navbar-item is-uppercase"
+          class="navbar-item"
           :to="{ name: 'about' }"
         >About</g-link>
         <g-link
-          class="navbar-item is-uppercase"
+          class="navbar-item"
           :to="{ name: 'work' }"
         >Work</g-link>
       </div>
@@ -91,14 +91,13 @@ export default {
 
 .brand {
   margin-left: 5px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
 }
 
 .navbar-item {
-  font-family: Oswald, sans-serif !important;
-  font-weight: 400;
+  font-family: brandon-grotesque, sans-serif !important;
+  font-weight: 900;
   font-style: normal;
 }
 </style>

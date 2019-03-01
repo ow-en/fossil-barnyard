@@ -34,14 +34,15 @@ body {
     font-family: "brandon-grotesque";
     src: url("https://use.typekit.net/lep8qlf.css");
   }
-  font-family: brandon-grotesque, sans-serif, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif !important;
-  font-weight: 100;
+  font-family: halyard-display;
+  font-weight: 400 !important;
   font-style: normal;
   font-size: 17px !important;
   color: #2c3e50;
 }
+/* , sans-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif !important; */
 @media screen and (max-width: 768px) {
   body {
     margin: 0 20px !important;
@@ -61,8 +62,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: brandon-grotesque, sans-serif !important;
   font-size: 18px;
-  text-transform: uppercase;
 }
 </style>
+
+

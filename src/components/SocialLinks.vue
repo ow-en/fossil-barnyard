@@ -10,7 +10,6 @@
       <i
         aria-hidden="true"
         :class="'fab fa-' + social.name"
-        :style="{'color': social.color}"
       ></i>
     </a>
   </div>

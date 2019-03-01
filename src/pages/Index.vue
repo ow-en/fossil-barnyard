@@ -1,11 +1,16 @@
 <template>
   <Layout>
-    <div>
-      <img
-        src="../assets/img/devlogo2.svg"
-        alt="logo"
-      >
-    </div>
+    <section class="hero is-bold is-fluid is-4">
+      <div class="hero-body">
+        <div class="container is-fluid">
+          <img
+            id="logoHero"
+            src="../assets/img/devlogo2.svg"
+            alt="logo"
+          >
+        </div>
+      </div>
+    </section>
     <div>
       <div class="">
         <h3 class="title has-text-dark is-4">Find a Post</h3>
