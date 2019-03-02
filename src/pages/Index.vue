@@ -99,7 +99,11 @@ query Posts ($page: Int) {
         timeToRead
         path
         date
-        tags
+        tags {
+          id
+          title
+          path
+        }
       }
     }
   }

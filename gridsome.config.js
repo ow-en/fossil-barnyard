@@ -24,6 +24,13 @@ module.exports = {
         path: 'blog/**/*.md',
         typeName: 'Post',
         route: '/blog/:slug',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            route: '/tag/:slug',
+            create: true,
+          },
+        },
         resolveAbsolutePaths: true,
         remark: {
           autolinkClassName: 'fas fa-hashtag',

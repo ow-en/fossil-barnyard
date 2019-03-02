@@ -24,13 +24,16 @@
         post: post (path: $path) {
             title
             content
-            timeToRead,
-            tags,
-            cover,
-            slug,
-            date,
-            author,
+            timeToRead
+            cover
+            slug
+            date
             excerpt
+            tags {
+              id
+              title
+              path
+            }
         }
     }
 </page-query>

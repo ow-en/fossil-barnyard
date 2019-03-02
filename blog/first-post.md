@@ -5,7 +5,7 @@ date: 2019-02-23 20:00:00
 author: owen caulfield
 published: false
 excerpt: This is a quick test post to see if this garbage heap is working.
-tags: vue
+tags: ["vue"]
 cover: ./gridsome.png
 ---
 
