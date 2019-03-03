@@ -34,7 +34,7 @@ body {
     font-family: "brandon-grotesque";
     src: url("https://use.typekit.net/lep8qlf.css");
   }
-  font-family: halyard-display;
+  font-family: halyard-display !important;
   font-weight: 400 !important;
   font-style: normal;
   font-size: 17px !important;
