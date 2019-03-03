@@ -2,9 +2,10 @@
   <div class="navbar-end is-hidden-mobile is-hidden-tablet-only">
     <a
       v-for="social in accounts"
-      href="social.href"
+      :href="social.href"
       :key="social.name"
       class="navbar-item"
+      target="_blank"
       :aria-label="social.name"
     >
       <i
