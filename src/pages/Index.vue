@@ -113,7 +113,7 @@ query Posts ($page: Int) {
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "caulfield.dev"
   },
   name: "Index",
   data() {
