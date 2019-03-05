@@ -1,7 +1,11 @@
 <template>
   <footer>
-    <hr />
-    <p>This is a test footer!</p>
+    <div class="content has-text-centered">
+      <hr />
+      <p>
+        <strong>caulfield.dev</strong> by <a href="https://www.caulfield.dev/About">Owen Caulfield</a>. Built with <strong>Gridsome</strong>.
+      </p>
+    </div>
   </footer>
 </template>
 

@@ -5,7 +5,7 @@
       :key="tag.id"
       :href="'/tag/' + tag.title"
     >
-      <span class="tag is-primary">{{tag.title}}</span>
+      <span class="tag">{{tag.title}}</span>
     </a>
   </div>
 </template>
@@ -14,6 +14,11 @@
 export default {
   props: {
     tags: Array
+  },
+  methods: {
+    created() {
+      console.log(tags);
+    }
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section class="hero is-bold is-fluid is-4">
+    <section class="hero is-fluid is-4">
       <div class="hero-body">
         <div class="container is-fluid">
           <img
@@ -32,14 +32,15 @@
         </b-field>
         <div class="columns is-centered">
           <div class="column is-12">
-            <div class="box">
+            <div class="box post-box">
               <section>
                 <div class="column is-12">
-                  <div class="card">
-                    <div
-                      v-for="post in $page.posts.edges"
-                      :key="post.node.id"
-                    >
+                  <div
+                    class="card post-card"
+                    v-for="post in $page.posts.edges"
+                    :key="post.node.id"
+                  >
+                    <div>
                       <div class="card-content">
                         <p class="title">
                           <g-link :to="post.node.path">{{post.node.title}}</g-link>
@@ -113,7 +114,7 @@ query Posts ($page: Int) {
 <script>
 export default {
   metaInfo: {
-    title: "caulfield.dev"
+    title: "Home"
   },
   name: "Index",
   data() {
@@ -134,5 +135,13 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+
+.post-card {
+  margin: 15px;
+}
+
+.post-box {
+  background: #fafafa;
 }
 </style>

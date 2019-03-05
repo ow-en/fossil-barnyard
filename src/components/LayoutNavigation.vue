@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar"
+    class="navbar is-fixed-top is-dark main-nav"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
@@ -35,23 +35,23 @@
         <g-link
           class="navbar-item"
           :to="{ name: 'home' }"
-        >Home</g-link>
+        >HOME</g-link>
         <g-link
           class="navbar-item"
           :to="{ name: 'blog' }"
-        >Blog</g-link>
+        >BLOG</g-link>
         <g-link
           class="navbar-item"
           :to="{ name: 'contact' }"
-        >Contact</g-link>
+        >CONTACT</g-link>
         <g-link
           class="navbar-item"
           :to="{ name: 'about' }"
-        >About</g-link>
+        >ABOUT</g-link>
         <g-link
           class="navbar-item"
           :to="{ name: 'work' }"
-        >Work</g-link>
+        >WORK</g-link>
       </div>
     </div>
     <social-links />
@@ -97,7 +97,12 @@ export default {
 
 .navbar-item {
   font-family: brandon-grotesque, sans-serif !important;
-  font-weight: 900;
+  font-weight: 600;
   font-style: normal;
+  font-size: 14px;
+}
+
+.main-nav {
+  height: 30px;
 }
 </style>

@@ -15,7 +15,7 @@
         class="article"
       ></article>
     </div>
-    <bulma-tag :tags="$page.post" />
+    <bulma-tag :tags="$page.post.tags" />
   </Layout>
 </template>
 

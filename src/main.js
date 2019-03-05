@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Buefy from 'buefy';
-import 'buefy/dist/buefy.css';
+
 import { faSpinner, faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faGithub, faTwitter, faSpinner, faAlignLeft);

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="content">
+    <div class="content blog-content">
       <h1 class="title is-2">Recent Articles</h1>
       <small>Lorem ipsum dolor.</small>
       <div class="articles">
@@ -80,6 +80,10 @@ export default {
 }
 .article h2 a:link,
 .article h2 a:visited {
-  color: #ff4e46;
+  color: rgb(255, 95, 97);
+}
+
+.blog-content {
+  margin-top: 40px;
 }
 </style>
