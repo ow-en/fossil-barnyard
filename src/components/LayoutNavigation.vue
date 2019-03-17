@@ -1,13 +1,7 @@
 <template>
-  <nav
-    class="navbar is-fixed-top is-dark main-nav"
-    aria-label="main navigation"
-  >
+  <nav class="navbar is-fixed-top main-nav" aria-label="main navigation">
     <div class="navbar-brand">
-      <a
-        href="/"
-        class="navbar-item"
-      >
+      <a href="/" class="navbar-item">
         <g-image
           src="../assets/img/avatar.png"
           alt="avatar"
@@ -27,31 +21,12 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div
-      id="navbarBasicExample"
-      class="navbar-menu"
-    >
+    <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <g-link
-          class="navbar-item"
-          :to="{ name: 'home' }"
-        >HOME</g-link>
-        <g-link
-          class="navbar-item"
-          :to="{ name: 'blog' }"
-        >BLOG</g-link>
-        <g-link
-          class="navbar-item"
-          :to="{ name: 'contact' }"
-        >CONTACT</g-link>
-        <g-link
-          class="navbar-item"
-          :to="{ name: 'about' }"
-        >ABOUT</g-link>
-        <g-link
-          class="navbar-item"
-          :to="{ name: 'work' }"
-        >WORK</g-link>
+        <g-link class="navbar-item" :to="{ name: 'home' }">HOME</g-link>
+        <g-link class="navbar-item" :to="{ name: 'blog' }">BLOG</g-link>
+        <g-link class="navbar-item" :to="{ name: 'contact' }">CONTACT</g-link>
+        <g-link class="navbar-item" :to="{ name: 'about' }">ABOUT</g-link>
       </div>
     </div>
     <social-links />
@@ -84,25 +59,31 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: "brandon-grotesque";
-  src: url("https://use.typekit.net/lep8qlf.css");
-}
-
 .brand {
   margin-left: 5px;
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 700;
+  font-family: scto-grotesk-a-medium, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar-item {
-  font-family: brandon-grotesque, sans-serif !important;
-  font-weight: 600;
+  font-family: scto-grotesk-a-medium, sans-serif;
+  font-weight: 500;
   font-style: normal;
-  font-size: 14px;
+  font-size: 1.25rem !important;
+  line-height: 2rem !important;
+  color: #35477d !important;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-item {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5rem !important;
+    line-height: 84px !important;
+  }
 }
 
 .main-nav {
-  height: 30px;
 }
 </style>

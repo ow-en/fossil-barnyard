@@ -1,72 +1,29 @@
 <template>
   <Layout>
-    <section class="hero is-fluid is-4">
+    <section class="hero is-fluid">
       <div class="hero-body">
-        <div class="container is-fluid">
-          <img
-            id="logoHero"
-            src="../assets/img/devlogo2.svg"
-            alt="logo"
-          >
+        <div class="container is-fluid text-hero">
+          caulfield°
+          <div class="hero-lower-text">
+            .dev
+          </div>
+          <div class="hero-lower-text">
+            a blog
+          </div>
+          <div class="hero-lower-text">
+            about
+          </div>
+          <div class="hero-lower-text">
+            programming
+          </div>
         </div>
       </div>
     </section>
     <div>
       <div class="">
-        <h3 class="title has-text-dark is-4">Find a Post</h3>
-        <b-field grouped>
-          <b-input
-            placeholder="Test Placeholder"
-            v-model="search"
-            type="text"
-            expanded
-          ></b-input>
-          <p class="control">
-            <button
-              class="button is-primary"
-              @click="searchPosts"
-            >
-              Search
-            </button>
-          </p>
-        </b-field>
         <div class="columns is-centered">
           <div class="column is-12">
-            <div class="box post-box">
-              <section>
-                <div class="column is-12">
-                  <div
-                    class="card post-card"
-                    v-for="post in $page.posts.edges"
-                    :key="post.node.id"
-                  >
-                    <div>
-                      <div class="card-content">
-                        <p class="title">
-                          <g-link :to="post.node.path">{{post.node.title}}</g-link>
-                        </p>
-                        <p class="subtitle">
-                          {{ new Date(post.node.date).toLocaleDateString() }} • ☕️ {{post.node.timeToRead}} min read
-                        </p>
-                        <p v-if="post.node.excerpt">{{post.node.excerpt}}</p>
-                      </div>
-                      <footer class="card-footer">
-                        <p class="card-footer-item">
-                          <span>
-                            View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-                          </span>
-                        </p>
-                        <p class="card-footer-item">
-                          <span>
-                            Share on <a href="#">Facebook</a>
-                          </span>
-                        </p>
-                      </footer>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
+            <div class="box post-box"></div>
           </div>
         </div>
       </div>
@@ -116,19 +73,16 @@ export default {
   metaInfo: {
     title: "Home"
   },
+  components: {},
   name: "Index",
   data() {
     return {
-      search: "",
       desc: "",
       posts: []
     };
   },
-  methods: {
-    searchPosts() {
-      console.log("Searching");
-    }
-  }
+  methods: {},
+  computed: {}
 };
 </script>
 
@@ -137,11 +91,33 @@ export default {
   margin-right: 1rem;
 }
 
-.post-card {
-  margin: 15px;
-}
-
 .post-box {
   background: #fafafa;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, #cc1d5e, #162838);
+}
+
+.text-hero {
+  font-size: 9rem;
+  line-height: 2rem;
+  width: 100% !important;
+  font-family: scto-grotesk-a-medium, sans-serif;
+  letter-spacing: -0.5vw;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  color: #6c5b7b;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.hero-lower-text {
+  margin-top: 120px;
+  margin-left: 0px;
+}
+
+.hero {
+  align-items: center !important;
 }
 </style>

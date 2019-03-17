@@ -29,16 +29,32 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "scto-grotesk-a-regular";
+  src: url("../assets/fonts/Scto Grotesk A Regular.eot");
+  src: url("../assets/fonts/Scto Grotesk A Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "scto-grotesk-a-medium";
+  src: url("../assets/fonts/Scto Grotesk A Medium.eot");
+  src: url("../assets/fonts/Scto Grotesk A Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+}
+
 body {
-  @font-face {
-    font-family: "brandon-grotesque";
-    src: url("https://use.typekit.net/lep8qlf.css");
-  }
-  font-family: halyard-display !important;
+  font-family: scto-grotesk-a-regular, sans-serif !important;
   font-weight: 400 !important;
   font-style: normal;
-  font-size: 17px !important;
-  color: #2c3e50;
+  font-size: 18px !important;
+  line-height: 25px !important;
+  color: darkslategray !important;
 }
 /* , sans-serif, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
@@ -49,8 +65,8 @@ body {
   }
 }
 ::selection {
-  color: white;
-  background: rgb(255, 95, 97);
+  color: #35477d;
+  background: #f5cece;
 }
 h1 {
   margin-top: 20px !important;
@@ -59,18 +75,35 @@ h1 {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
-  font-family: brandon-grotesque, sans-serif !important;
-  font-size: 18px;
+  font-family: scto-grotesk-a-medium, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #c06c84 !important;
+}
+
+h1 {
+  font-size: 42px !important;
+  line-height: 36px !important;
+}
+
+h4 {
+  font-size: 30px !important;
+  font-family: scto-grotesk-a-medium, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 34px !important;
+  text-transform: none !important;
+  color: #c06c84 !important;
 }
 
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #8c67ef;
+$primary: #6c5b7b;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
@@ -123,6 +156,10 @@ $colors: (
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// tags
+$tag-background-color: $turquoise;
+$tag-color: $white;
 
 // Import Bulma and Buefy styles
 @import "~bulma";

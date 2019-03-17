@@ -16,7 +16,7 @@
           </h2>
           <small>
             {{ new Date(post.node.date).toLocaleDateString() }}
-            • ☕️ {{post.node.timeToRead}} min read
+            • ☕️ {{ post.node.timeToRead }} min read
           </small>
           <p v-if="post.node.excerpt">
             {{ post.node.excerpt }}
@@ -80,7 +80,7 @@ export default {
 }
 .article h2 a:link,
 .article h2 a:visited {
-  color: rgb(255, 95, 97);
+  color: #6c5b7b;
 }
 
 .blog-content {

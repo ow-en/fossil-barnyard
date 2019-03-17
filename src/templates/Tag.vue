@@ -2,10 +2,9 @@
   <Layout>
     <div class="content">
       <h1 class="title is-2">Recent Articles by tag</h1>
-      <p>Articles with the tag
-        <span class="tag-title">
-          {{ $page.tag.title }}:
-        </span>
+      <p>
+        Articles with the tag
+        <span class="tag-title"> {{ $page.tag.title }}: </span>
       </p>
       <div class="articles">
         <div
@@ -19,7 +18,8 @@
             </g-link>
           </h2>
           <small>
-            {{ new Date(node.date).toLocaleDateString() }} • ☕️ {{node.timeToRead}} min read
+            {{ new Date(node.date).toLocaleDateString() }} • ☕️
+            {{ node.timeToRead }} min read
           </small>
           <p v-if="node.excerpt">
             {{ node.excerpt }}

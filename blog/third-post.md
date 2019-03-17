@@ -1,12 +1,11 @@
 ---
-slug: first-post
-title: This is a Test Post !
+slug: third-post
+title: Test Post C !
 date: 2019-02-23 20:00:00
 author: owen caulfield
 published: false
 excerpt: This is a quick test post to see if this garbage heap is working.
-tags: ["vue", "test"]
-color: ["$primary"]
+tags: ["vue"]
 cover: ./gridsome.png
 ---
 
@@ -17,6 +16,10 @@ cover: ./gridsome.png
 - Bullet point #3
 
 ## This is a second level title
+
+### Third
+
+#### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet justo donec enim diam vulputate ut pharetra sit amet. Leo urna molestie at elementum eu facilisis. Cum sociis natoque penatibus et magnis dis parturient. Dignissim convallis aenean et tortor at risus. Ut placerat orci nulla pellentesque.
 
 > This is a blockquote
 

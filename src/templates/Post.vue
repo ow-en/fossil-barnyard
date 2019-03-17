@@ -5,17 +5,10 @@
       <small class="about">
         📅 {{ formatCreatedOn }} • ☕️ {{ $page.post.timeToRead }} min read
       </small>
-      <g-image
-        v-if="$page.post.cover"
-        :src="$page.post.cover"
-        class="cover"
-      />
-      <article
-        v-html="$page.post.content"
-        class="article"
-      ></article>
+      <bulma-tag class="bulma-tags" :tags="$page.post.tags" />
+      <g-image v-if="$page.post.cover" :src="$page.post.cover" class="cover" />
+      <article v-html="$page.post.content" class="article"></article>
     </div>
-    <bulma-tag :tags="$page.post.tags" />
   </Layout>
 </template>
 
@@ -92,6 +85,9 @@ export default {
 </script>
 
 <style>
+.bulma-tags {
+  float: right;
+}
 .cover {
   margin-top: 10px;
 }
