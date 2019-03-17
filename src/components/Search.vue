@@ -1,7 +1,7 @@
 
 
 <template>
-  <ais-instant-search :search-client="searchClient" index-name="posts">
+  <ais-instant-search-ssr :search-client="searchClient">
     <div class="search-panel">
       <div class="search-panel__results">
         <div class="field">
@@ -109,28 +109,67 @@
         </ais-hits-per-page>
       </div>
     </div>
-  </ais-instant-search>
+  </ais-instant-search-ssr>
 </template>
 
 <script>
 import BulmaTag from "@/components/BulmaTag.vue";
-import algoliasearch from "algoliasearch";
-import "instantsearch.css/themes/algolia-min.css";
+import {
+  AisInstantSearchSsr,
+  AisRefinementList,
+  AisHits,
+  AisHighlight,
+  AisSearchBox,
+  AisStats,
+  AisPagination,
+  createInstantSearch
+} from "vue-instantsearch";
+import algoliasearch from "algoliasearch/lite";
+
+const searchClient = algoliasearch(
+  "GY5HDWBC7W",
+  "8f01c1c458c40ca5fc5bee0bc818ab67"
+);
+
+const { instantsearch, rootMixin } = createInstantSearch({
+  searchClient,
+  indexName: "posts"
+});
 
 export default {
   components: {
-    BulmaTag
+    BulmaTag,
+    "ais-instant-search-ssr": AisInstantSearchSsr,
+    AisRefinementList,
+    AisHits,
+    AisHighlight,
+    AisSearchBox,
+    AisStats,
+    AisPagination
+  },
+  asyncData() {
+    return instantsearch
+      .findResultsState({
+        query: "hi",
+        hitsPerPage: 5,
+        disjunctiveFacets: ["genre"],
+        disjunctiveFacetsRefinements: { genre: ["Comedy"] }
+      })
+      .then(() => ({
+        instantSearchState: instantsearch.getState()
+      }));
+  },
+  beforeMount() {
+    instantsearch.hydrate(this.instantSearchState);
   },
   data() {
     return {
-      searchClient: algoliasearch(
-        "GY5HDWBC7W",
-        "8f01c1c458c40ca5fc5bee0bc818ab67"
-      ),
+      searchClient,
       aisSearch: "",
       showInput: false
     };
-  }
+  },
+  mixins: [rootMixin]
 };
 </script>
 
