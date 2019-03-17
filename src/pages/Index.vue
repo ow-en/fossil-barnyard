@@ -23,7 +23,9 @@
       <div class="">
         <div class="columns is-centered">
           <div class="column is-12">
-            <div class="box post-box"></div>
+            <div class="box post-box">
+              <search :posts="$page.posts.edges" />
+            </div>
           </div>
         </div>
       </div>
@@ -69,11 +71,15 @@ query Posts ($page: Int) {
 </page-query>
 
 <script>
+import Search from "@/components/Search";
+
 export default {
   metaInfo: {
     title: "Home"
   },
-  components: {},
+  components: {
+    Search
+  },
   name: "Index",
   data() {
     return {
